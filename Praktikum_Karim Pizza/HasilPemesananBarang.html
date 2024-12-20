@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Barang</title>
+    <style>
+        .Transelection {
+        margin: 10px;
+
+        }
+        
+    </style>
+</head>
+<body style="font-family: 'Times New Roman', Times, serif;">
+    <form action="" method="post">
+        <fieldset style="margin: 0px 350px;">
+            <div style="display: flex; justify-content: space-around; border: 2px solid black; padding: 5px;">
+                <a href="">Home</a>|
+                <a href="">Register</a>|
+                <a href="">Policy</a>|
+                <a href="">Log out</a>
+            </div>
+            <table style="margin-top: 20px;">
+                <tr>
+                <td style="width: 250px; vertical-align: top;" rowspan="11">
+                    <img src="img/example_10220333.png" style="width: 200px; height: 200px; border: 1px solid black;">
+                </td>
+                <td style="vertical-align: text-top;">
+                    <b>Title Here:</b>
+                </td>
+                <td>
+                    Example
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: text-top;">
+                    <b>Description:</b>
+                </td>
+                <td>
+                    Year : ****
+                    <br>
+                    Model : ****
+                    <br>
+                    Condition : Normal
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: text-top;">
+                    <b>Total Ammount:</b>
+                </td>
+                <td>
+                    IDR 500.000
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: text-top;">
+                    <b>Pay To:</b>
+                </td>
+                <td>
+                    123-456-789-0
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b style="vertical-align: text-top;">Payment Type:</b>
+                </td>
+                <td>
+                    <select name="payment_type" id="payment_type" style="width: 300px; height: 25px;">
+                        <option>Visa Debit</option>
+                        <option>Pay Pal</option>
+                        <option>ShopeePay</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b style="vertical-align: text-top;">Account Holder:</b>
+                </td>
+                <td>
+                    <input type="text" name="account_holder" id="account_holder" style="width: 300px;">
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: text-top;">
+                    <b>Account No:</b>
+                </td>
+                <td>
+                    <input type="text" name="account_no" id="account_no" style="width: 300px;">
+                    <br>
+                    <input type="checkbox" id="a">
+                    <label for="a">Send to Mobile Phone</label>
+                    <br>
+                    <input type="checkbox" id="a">
+                    <label for="a">Email me copy of transaction</label>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: text-top;">
+                    <b>Send to mobile phone:</b>
+                </td>
+                <td>
+                    <input type="text" name="send_to_mobile_phone" id="send_to_mobile_phone" style="width: 300px;">
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="vertical-align: text-top;">
+                    <b>Send to Email:</b>
+                </td>
+                <td>
+                    <input type="text" name="send_to_email" id="send_to_email" style="width: 300px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <button style="background-color: green; color: white;">Pay Using Quidlink</button>
+                    <a href="PemesenanBarang.html" style="border: 1px solid black; padding: 2px; background-color: red; color: white; text-decoration: none;">Back</a>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+</body>
+</html>

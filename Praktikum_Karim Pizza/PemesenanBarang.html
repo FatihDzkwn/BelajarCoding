@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Barang</title>
+    <style>
+        .Transelection {
+        margin: 10px;
+
+        }
+        
+    </style>
+</head>
+<body style="font-family: 'Times New Roman', Times, serif;">
+    <form action="HasilPemesananBarang.html" method="get">
+        <fieldset style="margin: 0px 350px;">
+            <div style="display: flex; justify-content: space-around; border: 2px solid black; padding: 5px;">
+                <a href="">Home</a>|
+                <a href="">Generate link</a>|
+                <a href="">Transactiion history</a>|
+                <a href="">Policy</a>|
+                <a href="">Log out</a>
+            </div>
+            <table style="margin-top: 20px;">
+                <tr>
+                <td style="width: 250px; vertical-align: top;" rowspan="11">
+                    <img id="image" src="img/example_10220333.png" style="width: 200px; height: 200px; border: 1px solid black;">
+                        <button type="button"><label for="upload_pic">Upload Picture</label></button>
+                    <input type="file" name="upload_pic" id="upload_pic" hidden>
+                </td>
+                <td style="vertical-align: text-top;">
+                    <b>Title Here:</b>
+                </td>
+                <td>
+                    <input type="text" name="title" id="title" style="width: 300px;" height="25px;">
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: text-top;">
+                    <b>Description:</b>
+                </td>
+                <td>
+                    <textarea name="Description" id="Description" cols="38" rows="6"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: text-top;">
+                    <b>Account Number:</b>
+                </td>
+                <td>
+                    <input type="text" name="account_number" id="account_number" style="width: 300px;">
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: text-top;">
+                    <b>Bank:</b>
+                </td>
+                <td>
+                    <select name="bank" id="bank" style="width: 200px">
+                        <option value="BRI">BRI</option>
+                        <option value="BSI">BSI</option>
+                        <option value="MANDIRI">MANDIRI</option>
+                        <option value="BCA">BCA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b style="vertical-align: text-top;">Account Holder</b>
+                </td>
+                <td>
+                    <input type="text" name="account_holder" id="account_holder" style="width: 300px;">
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="vertical-align: text-top;">
+                    <b>Transelection:</b>
+                </td>
+                <td>
+                    <select name="Transelection"
+                    style="width: 40px;">
+                    <option selected>1</option>
+                    <option selected>2</option>
+                    <option selected>3</option>
+                    <option selected>4</option>
+                    <option selected>5</option>
+                    <option selected>6</option>
+                </select>
+            </td>
+        </tr>
+        <td>
+            <small style="display: block; margin-top: 5px;">*If the transaction is for 3 people, choose 3 from the drop-down list.</small>
+        </td>
+            <tr>
+                <td style="vertical-align: text-top;">
+                    <b>Account No:</b>
+                </td>
+                <td>
+                    <input type="text" name="account_no" id="account_no" style="width: 300px;">
+                    <br>
+                    <input type="checkbox" id="a">
+                    <label for="a">Send to Mobile Phone</label>
+                    <br>
+                    <input type="checkbox" id="a">
+                    <label for="a">Email me copy of transaction</label>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: text-top;">
+                    <b>Send to mobile phone:</b>
+                </td>
+                <td>
+                    <input type="text" name="send_to_mobile_phone" id="send_to_mobile_phone" style="width: 300px;">
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="vertical-align: text-top;">
+                    <b>Send to Email:</b>
+                </td>
+                <td>
+                    <input type="text" name="send_to_email" id="send_to_email" style="width: 300px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <button style="background-color: green; color: white;">Generate nobr link</button>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+    <script>
+        upload_pic.onchange = evt => {
+            const [file] = upload_pic.files
+            if (file) {
+                image.src = URL.createObjectURL(file)
+            }
+        }
+    </script>
+</body>
+</html>

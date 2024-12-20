@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: auto;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        background-color: #eee;
+        padding: 10px;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: #333;
+        margin-right: 15px;
+      }
+
+      .form-container {
+        display: flex;
+      }
+
+      .image-section {
+        flex: 1;
+        text-align: center;
+        margin-right: 20px;
+      }
+
+      .image-placeholder {
+        width: 200px;
+        height: 200px;
+        background-color: #ddd;
+        margin-bottom: 10px;
+      }
+
+      .form-fields {
+        flex: 2;
+      }
+
+      .field {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      textarea {
+        height: 100px;
+        resize: none;
+      }
+
+      .checkbox {
+        margin-bottom: 10px;
+      }
+
+      .checkbox label {
+        display: inline-block;
+        margin-left: 5px;
+      }
+
+      button {
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      button:hover {
+        background-color: #218838;
+      }
+
+      .generate-btn {
+        margin-top: 20px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Generate Link</a>
+        <a href="#">Transaction History</a>
+        <a href="#">Policy</a>
+        <a href="#">Logout</a>
+      </nav>
+
+      <!-- Form Section -->
+      <div class="form-container">
+        <!-- Image Upload -->
+        <div class="image-section">
+          <div class="image-placeholder">[Image Placeholder]</div>
+          <button>Upload Picture</button>
+        </div>
+
+        <!-- Form Fields -->
+        <div class="form-fields">
+          <div class="field">
+            <label for="title">Title Here:</label>
+            <input type="text" id="title" value="MacBook Air £800" />
+          </div>
+
+          <div class="field">
+            <label for="description">Description:</label>
+            <textarea id="description">
+Year : 2009&#10;Model :&#10;Condition : Mint</textarea
+            >
+          </div>
+
+          <div class="field">
+            <label for="account-number">Account Number:</label>
+            <input type="text" id="account-number" value="123-456-789-0" />
+          </div>
+
+          <div class="field">
+            <label for="bank">Bank:</label>
+            <select id="bank">
+              <option value="HSBC">HSBC</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="account-holder">Account Holder:</label>
+            <input type="text" id="account-holder" value="Name Here" />
+          </div>
+
+          <div class="field">
+            <label for="transaction">Transaction:</label>
+            <input type="number" id="transaction" value="1" />
+            <p>
+              * if the transaction is for 3 people, choose 3 from the drop-down
+              list
+            </p>
+          </div>
+
+          <div class="checkbox">
+            <input type="checkbox" id="mobile" checked />
+            <label for="mobile">Send to Mobile Phone</label>
+          </div>
+
+          <div class="checkbox">
+            <input type="checkbox" id="email" checked />
+            <label for="email">Send to Email</label>
+          </div>
+
+          <div class="field">
+            <label for="mobile-number">Send to Mobile Phone:</label>
+            <input
+              type="text"
+              id="mobile-number"
+              value="1234567890, 1234567891"
+            />
+          </div>
+
+          <div class="field">
+            <label for="email-address">Send to Email:</label>
+            <input
+              type="email"
+              id="email-address"
+              value="mfmm2g13@soton.ac.uk, fys_06@yahoo.com"
+            />
+          </div>
+
+          <button class="generate-btn">Generate Nabr Link</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

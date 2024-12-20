@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JS</title>
+    <script src="js"></script>
+    <script>
+        function fungsiku(){
+            let warna = document.getElementById('nf1').value;
+            console.log("Anda Pilih Warna "+ warna);
+            document.body.style.backgroundColor = warna;
+            // var x = document.querySelector("select").value;
+            // document.body.style.backgroundColor = x;
+        }
+        function kursrupiah(){
+            let nilaidollar = 15926;
+            let dollar = document.getElementById('dollar').value;
+            let rupiah = parseFloat(dollar) * nilaidollar;
+            document.getElementById('rupiah').value = rupiah;
+            let area_nilai = document.getElementById('nilai');
+            area_nilai.style.color = "red";
+            area_nilai.innerHTML = angkaTerbilang(rupiah).toUpperCase() + " Rupiah";
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        Pilih Warna :
+        <select name="warna" onchange="fungsiku()" id="nf1">
+            <option value="red">Merah</option>
+            <option value="blue">Biru</option>
+            <option value="green">Hijau</option>
+        </select>
+        <hr>
+        Masukkan Nilai $ : 
+            <input type="text" id="dollar" onkeyup="kursrupiah()">
+        Nilai Rupiah :
+            <input type="text" id="rupiah">   
+            <br><br>
+            <span id="nilai"></span> 
+    </form>
+</body>
+</html>
